@@ -2,6 +2,8 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\EnsureValidRenterSession;
+use App\Http\Middleware\RenterRequired;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -36,6 +38,12 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+
+
+            // Multi Middlewares
+            \App\Http\Middleware\RenterRequired::class,
+            \App\Http\Middleware\EnsureValidRenterSession::class,
+            
         ],
 
         'api' => [
