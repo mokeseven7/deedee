@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 
 use App\Models\DeeDee;
 use App\Http\Requests\DeleteDeeDeeRequest;
-use App\Http\Requests\ShowDeeDeeRequest;
 use App\Http\Requests\StoreDeeDeeRequest;
 use App\Http\Requests\UpdateDeeDeeRequest;
 
